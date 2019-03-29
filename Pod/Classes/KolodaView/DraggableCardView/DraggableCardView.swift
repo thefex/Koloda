@@ -9,11 +9,21 @@
 import UIKit
 import pop
 
-public enum DragSpeed: TimeInterval {
-    case slow = 2.0
-    case moderate = 1.5
-    case `default` = 0.8
-    case fast = 0.4
+@objc public enum DragSpeed : Int {
+    
+    case slow
+    case moderate
+    case `default`
+    case fast
+    
+    func toDouble() -> Double {
+        switch self {
+        case .slow: return 2
+        case .moderate: return 1.5
+        case .default: return 0.8
+        case .fast: return 0.4
+        }
+    }
 }
 
 protocol DraggableCardDelegate: class {
@@ -43,7 +53,7 @@ private let cardResetAnimationSpringBounciness: CGFloat = 10.0
 private let cardResetAnimationSpringSpeed: CGFloat = 20.0
 private let cardResetAnimationKey = "resetPositionAnimation"
 private let cardResetAnimationDuration: TimeInterval = 0.2
-internal var cardSwipeActionAnimationDuration: TimeInterval = DragSpeed.default.rawValue
+internal var cardSwipeActionAnimationDuration: TimeInterval = DragSpeed.default.toDouble()
 
 public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
 
@@ -110,7 +120,7 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
         addGestureRecognizer(tapGestureRecognizer)
 
         if let delegate = delegate {
-            cardSwipeActionAnimationDuration = delegate.card(cardSwipeSpeed: self).rawValue
+            cardSwipeActionAnimationDuration = delegate.card(cardSwipeSpeed: self).toDouble()
         }
     }
     
@@ -216,7 +226,7 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     
     func configureSwipeSpeed() {
         if let delegate = delegate {
-            cardSwipeActionAnimationDuration = delegate.card(cardSwipeSpeed: self).rawValue
+            cardSwipeActionAnimationDuration = delegate.card(cardSwipeSpeed: self).toDouble()
         }
     }
     

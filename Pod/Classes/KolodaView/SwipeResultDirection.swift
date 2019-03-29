@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-public enum SwipeResultDirection: String {
+@objc public enum SwipeResultDirection : Int {
     
     case left
     case right
