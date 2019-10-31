@@ -14,6 +14,9 @@ Purpose
 
 KolodaView is a class designed to simplify the implementation of Tinder like cards on iOS. It adds convenient functionality such as a UITableView-style dataSource/delegate interface for loading views dynamically, and efficient view loading, unloading .
 
+*THIS FORK ADD OBJ-C COMPATIBILITY TO MAKE IT POSSIBLE TO BIND AS XAMARIN BINDINGS LIBRARY*
+
+
 Supported OS & SDK Versions
 -----------------------------
 
