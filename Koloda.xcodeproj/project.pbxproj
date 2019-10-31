@@ -166,6 +166,7 @@
 				TargetAttributes = {
 					C517E4AA1D9CF9010002D88F = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -175,6 +176,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = C517E4A11D9CF9010002D88F;
@@ -332,7 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoapods.Koloda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -354,7 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoapods.Koloda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
